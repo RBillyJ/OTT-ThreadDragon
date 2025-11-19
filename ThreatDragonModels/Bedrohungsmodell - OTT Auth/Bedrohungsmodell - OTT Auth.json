@@ -1834,12 +1834,12 @@
                 "y": -204
               },
               {
-                "x": 340,
-                "y": -174
+                "x": 243,
+                "y": -260
               },
               {
-                "x": 243,
-                "y": -8
+                "x": 190,
+                "y": -10
               }
             ]
           },
@@ -2208,6 +2208,103 @@
               {
                 "x": 710,
                 "y": 85
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Report Status",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Report Status"
+            ],
+            "id": "1900f22e-43ad-4b2a-99ee-80695c8fb66e",
+            "source": {
+              "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa",
+              "port": "1fb84855-041c-4bcd-93f0-0a22a445b911"
+            },
+            "target": {
+              "cell": "a61b14e2-bb1a-46e1-8cce-a5736d046389",
+              "port": "011a86f0-b32b-4a30-a1d6-c0a418404a8a"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Report Status",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Report Status"
+            ],
+            "id": "cdb03ccb-76cc-49ef-b560-e938d8092abd",
+            "source": {
+              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c",
+              "port": "a0138799-83c0-4512-86bd-4646f635eae3"
+            },
+            "target": {
+              "cell": "a61b14e2-bb1a-46e1-8cce-a5736d046389",
+              "port": "19eec109-1db2-4684-9520-060413deccb6"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": -80
               }
             ]
           },
@@ -2624,6 +2721,126 @@
             "target": {
               "cell": "ebc88767-2bed-409f-b854-efadec206ba8",
               "port": "8a1d492d-023d-42e5-ac2f-18d3ac740c1a"
+            }
+          },
+          {
+            "position": {
+              "x": 210,
+              "y": -180
+            },
+            "size": {
+              "width": 90,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "SIEM System"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "02d14dbf-02c8-424a-ba63-7a270f94277a"
+                },
+                {
+                  "group": "right",
+                  "id": "19eec109-1db2-4684-9520-060413deccb6"
+                },
+                {
+                  "group": "bottom",
+                  "id": "011a86f0-b32b-4a30-a1d6-c0a418404a8a"
+                },
+                {
+                  "group": "left",
+                  "id": "c1814f94-621a-480e-83d4-bbb99b442dc3"
+                }
+              ]
+            },
+            "id": "a61b14e2-bb1a-46e1-8cce-a5736d046389",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Process",
+              "name": "SIEM System",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
             }
           }
         ],
