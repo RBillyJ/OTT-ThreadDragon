@@ -751,7 +751,9 @@
               "outOfScope": false,
               "reasonOutOfScope": "",
               "threats": [],
-              "hasOpenThreats": false
+              "hasOpenThreats": false,
+              "handlesCardPayment": null,
+              "isWebApplication": null
             }
           },
           {
@@ -862,7 +864,7 @@
             "data": {
               "name": "Telefon-Routing-\nInterface",
               "description": "",
-              "type": "tm.Flow",
+              "type": "tm.Process",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1193,9 +1195,9 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "",
+              "protocol": "TLS",
               "threats": []
             },
             "labels": [
@@ -1246,9 +1248,9 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "isBidirectional": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "isPublicNetwork": false,
-              "protocol": "",
+              "protocol": "TLS",
               "threats": []
             },
             "labels": [
@@ -1262,6 +1264,10 @@
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
             "vertices": [
+              {
+                "x": 490,
+                "y": 120
+              },
               {
                 "x": 460,
                 "y": 130
@@ -2178,7 +2184,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Antwort (TLS)",
+              "name": "Antwort",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2191,7 +2197,7 @@
               "threats": []
             },
             "labels": [
-              "Antwort (TLS)"
+              "Antwort"
             ],
             "id": "10939d18-1017-4b86-841d-9f5394f83f90",
             "source": {
@@ -2328,8 +2334,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Weekly\nReport",
-              "description": "",
+              "name": "Weekly Report\n(TLS)",
+              "description": "signed and encrypted",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -2341,7 +2347,7 @@
               "threats": []
             },
             "labels": [
-              "Weekly\nReport"
+              "Weekly Report\n(TLS)"
             ],
             "id": "22473319-142d-494f-85d0-810d66e5a3fc",
             "source": {
@@ -2352,7 +2358,12 @@
               "cell": "383521dc-5417-41cb-a3f8-cd6e594c8b6a",
               "port": "c8130ada-2642-4594-9e2f-02572e6c3682"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 255,
+                "y": -220
+              }
+            ]
           },
           {
             "position": {
@@ -2744,7 +2755,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "2. Weiterleitung\nTelefonnummer (TLS)",
+              "name": "2. Weiterleitung\nTelefonnummer ",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2757,7 +2768,7 @@
               "threats": []
             },
             "labels": [
-              "2. Weiterleitung\nTelefonnummer (TLS)"
+              "2. Weiterleitung\nTelefonnummer "
             ],
             "id": "6786f1bc-30d8-4be7-ac8a-fd312eec63eb",
             "source": {
@@ -2767,7 +2778,13 @@
             "target": {
               "cell": "ebc88767-2bed-409f-b854-efadec206ba8",
               "port": "8a1d492d-023d-42e5-ac2f-18d3ac740c1a"
-            }
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 13
+              }
+            ]
           },
           {
             "position": {
@@ -2910,6 +2927,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -2993,7 +3011,6 @@
               ]
             },
             "id": "383521dc-5417-41cb-a3f8-cd6e594c8b6a",
-            "zIndex": 16,
             "data": {
               "type": "tm.Actor",
               "name": "Management",
