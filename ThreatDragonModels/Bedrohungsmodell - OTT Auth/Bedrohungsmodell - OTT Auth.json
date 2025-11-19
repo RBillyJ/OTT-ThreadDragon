@@ -2309,6 +2309,52 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Weekly\nReport",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "TLS",
+              "threats": []
+            },
+            "labels": [
+              "Weekly\nReport"
+            ],
+            "id": "22473319-142d-494f-85d0-810d66e5a3fc",
+            "source": {
+              "cell": "a61b14e2-bb1a-46e1-8cce-a5736d046389",
+              "port": "02d14dbf-02c8-424a-ba63-7a270f94277a"
+            },
+            "target": {
+              "cell": "383521dc-5417-41cb-a3f8-cd6e594c8b6a",
+              "port": "c8130ada-2642-4594-9e2f-02572e6c3682"
+            },
+            "vertices": []
+          },
+          {
             "position": {
               "x": 410,
               "y": -174
@@ -2744,6 +2790,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -2827,7 +2874,6 @@
               ]
             },
             "id": "a61b14e2-bb1a-46e1-8cce-a5736d046389",
-            "zIndex": 15,
             "data": {
               "type": "tm.Process",
               "name": "SIEM System",
@@ -2840,6 +2886,123 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 240,
+              "y": -380
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Management"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "a77de266-e4eb-43ef-8504-e9c5eb05524b"
+                },
+                {
+                  "group": "right",
+                  "id": "dba52549-b74e-4651-b5d7-592893570011"
+                },
+                {
+                  "group": "bottom",
+                  "id": "c8130ada-2642-4594-9e2f-02572e6c3682"
+                },
+                {
+                  "group": "left",
+                  "id": "1712d05e-186b-4b70-8ca9-b850f03572ca"
+                }
+              ]
+            },
+            "id": "383521dc-5417-41cb-a3f8-cd6e594c8b6a",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Management",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
               "threats": []
             }
           }
