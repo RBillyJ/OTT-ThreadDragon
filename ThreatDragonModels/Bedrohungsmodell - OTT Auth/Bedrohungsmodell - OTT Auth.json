@@ -149,8 +149,8 @@
                 "text": "Login System -\nMobile App"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -264,18 +264,18 @@
                 {
                   "id": "04daa02a-aaa5-4957-b0ba-27d04c02edc7",
                   "title": "Elevation of Privilege wegen ungesicherter SD-Karte",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Elevation of privilege",
-                  "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.\n\nCAPEC-150: An adversary exploits well-known locations for resources for the purposes of undermining the security of the target. \n\nT1005: Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.",
-                  "mitigation": "Jede Applikation sollte nicht die Daten anderer Applikationen sehen:\nApplikationdaten sollte nicht in einer SD-Karte gespeichert werden",
+                  "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.\n\nCAPEC-150: An adversary exploits well-known locations for resources for the purposes of undermining the security of the target. \n\nD: 8 / R: 9 / E: 5 / A: 3 / DREA: 25\n\nT1005: Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.",
+                  "mitigation": "Jede Applikation sollte nicht die Daten anderer Applikationen sehen:\nApplikationdaten sollte nicht in einer SD-Karte gespeichert werden\n\nD: 8 / R: 6 / E: 2 / A: 3 / DREA: 19",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 108,
-                  "score": ""
+                  "score": "19"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isWebApplication": null,
               "threatFrequency": {
                 "spoofing": 0,
@@ -283,7 +283,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 4
+                "elevationOfPrivilege": 5
               },
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
@@ -303,8 +303,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -405,18 +405,18 @@
                 {
                   "id": "0351d551-6018-46fc-ba80-9370dbac5d37",
                   "title": "Zerstörung des Host Device",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "High",
                   "type": "Denial of service",
-                  "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property",
-                  "mitigation": "braucht Redundanz:\nOffsite Backups",
+                  "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property\n\nD: 10 / R: 8 / E: 8 / A: 10 / DREA: 36",
+                  "mitigation": "braucht Redundanz:\nOffsite Backups\n\nD: 6 / R: 8 / E: 8/ A: 10 / DREA: 32",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
-                  "score": ""
+                  "score": "32"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -426,12 +426,19 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 3,
+                "denialOfService": 6,
                 "elevationOfPrivilege": 0
               },
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null,
               "isWebApplication": null
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -448,8 +455,8 @@
                 "text": "Telefonnummer-\nAPI-Gateway"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -554,32 +561,32 @@
                   "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Weil der Schlüssel in eine ungesicherte/unverschlüsselte Datei gespeichert ist, kann man den Schlüssel kopieren.\n\nWenn statischer symmetrischer Schlüssel kompromittiert wird, kann die API Gateway gespooft werden. Sensitive Daten, die von der 2-FaktorAuth gesendet werden, werden dann kompromittiert.\n\nCAPEC-151: Identity Spoofing: assuming (i.e., taking on) the identity of some other entity (human or non-human) and then using that identity to accomplish a goal.\n\nT1649: Steal or Forge Authentication Certificates: steal or forge certificates used for authentication to access remote systems or resources.\n\nD: 8 / R: 9 / E: 7 / A: 10 / DREA: 34",
-                  "mitigation": "Schlüssel muss gesichert werden. (Verschlüsselung der Konfig-Datei oder nicht statisch)\n\nD: 8 / R:  5/ E: 2 / A: 10 / neue DREA: 25",
+                  "mitigation": "Schlüssel muss gesichert werden. (Verschlüsselung der Konfig-Datei oder nicht statisch)\n\nD: 8 / R:  5/ E: 2 / A: 9 / neue DREA: 24",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 103,
-                  "score": "25"
+                  "score": "24"
                 },
                 {
                   "id": "f9a55b37-c594-476b-944e-bf703edd77b7",
                   "title": "Unverschlüsselte Konfiguration Datei",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Kryptographische Schlüsseln sind in dieser Datei gespeichert.\n\nCAPEC-180: Exploiting Incorrectly Configured Access Control Security Levels.\n\nT1552: Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system.",
-                  "mitigation": "Konfigurationdatei sollte nicht offentlich zugreifbar:\nKonfigurationsdatei sollte verschlüsselt werden.",
+                  "description": "Kryptographische Schlüsseln sind in dieser Datei gespeichert.\n\nCAPEC-180: Exploiting Incorrectly Configured Access Control Security Levels.\n\nT1552: Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system.\n\nD: 8 / R: 9 / E: 8 / A: 4 / DREA: 29",
+                  "mitigation": "Konfigurationdatei sollte nicht offentlich zugreifbar:\nKonfigurationsdatei sollte verschlüsselt werden.\n\nD: 8 / R: 3 / E: 2 / A: 4 / DREA: 17",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
-                  "score": ""
+                  "score": "17"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threatFrequency": {
-                "spoofing": 10,
+                "spoofing": 11,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 4,
+                "informationDisclosure": 5,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               },
@@ -2466,13 +2473,11 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2572,25 +2577,25 @@
               "storesCredentials": false,
               "isEncrypted": true,
               "isSigned": true,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "3bed33ba-fadc-42a0-b72f-9219c0dd3fab",
                   "title": "Logdatei ist manipulierbar",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Low",
                   "type": "Repudiation",
-                  "description": "mit ausreichenden Rechten (z.B von Malicious Insiders oder einem kompromittierten Admin-Konto)\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
-                  "mitigation": "Logdatei sollte nicht einfach manipulierbar:\nLog DB sollte read-only außerhalb des 2-FaktorAuthdienst",
+                  "description": "mit ausreichenden Rechten (z.B von Malicious Insiders oder einem kompromittierten Admin-Konto)\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity\n\nD: 7 / R: 8 / E: 4 / A: 8 / DREA: 29",
+                  "mitigation": "Logdatei sollte nicht einfach manipulierbar:\nLog DB sollte read-only außerhalb des 2-FaktorAuthdienst\n\nD: 2 / R: 2 / E: 2 / A: 8 / DREA: 14",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
-                  "score": ""
+                  "score": "14"
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 4,
+                "repudiation": 6,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -3035,13 +3040,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
