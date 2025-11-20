@@ -511,11 +511,24 @@
                   "new": false,
                   "number": 103,
                   "score": ""
+                },
+                {
+                  "id": "f9a55b37-c594-476b-944e-bf703edd77b7",
+                  "title": "Unverschlüsselte Konfiguration Datei",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Kryptographische Schlüsseln sind in dieser Datei gespeichert.\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 106,
+                  "score": ""
                 }
               ],
               "hasOpenThreats": true,
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -3114,7 +3127,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 105
+    "threatTop": 106
   },
   "version": "2.5.0"
 }
