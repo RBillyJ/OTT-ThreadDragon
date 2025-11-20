@@ -268,7 +268,7 @@
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.\n\nCAPEC-150: An adversary exploits well-known locations for resources for the purposes of undermining the security of the target. \n\nD: 8 / R: 9 / E: 5 / A: 3 / DREA: 25\n\nT1005: Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.",
-                  "mitigation": "Jede Applikation sollte nicht die Daten anderer Applikationen sehen:\nApplikationdaten sollte nicht in einer SD-Karte gespeichert werden\n\nD: 8 / R: 6 / E: 2 / A: 3 / DREA: 19",
+                  "mitigation": "Jede Applikation sollte nicht die Daten anderer Applikationen sehen:\nApplikationdaten sollte nicht in einer SD-Karte gespeichert werden\n\nMASVS-STORAGE-1: The app securely stores sensitive data.\n\nD: 8 / R: 6 / E: 2 / A: 3 / DREA: 19",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 108,
@@ -283,7 +283,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 5
+                "elevationOfPrivilege": 6
               },
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
@@ -567,7 +567,7 @@
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Kryptographische Schlüsseln sind in dieser Datei gespeichert.\n\nCAPEC-180: Exploiting Incorrectly Configured Access Control Security Levels.\n\nT1552: Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system.\n\nD: 8 / R: 9 / E: 8 / A: 4 / DREA: 29",
-                  "mitigation": "Konfigurationdatei sollte nicht offentlich zugreifbar:\nKonfigurationsdatei sollte verschlüsselt werden.\n\nD: 8 / R: 3 / E: 2 / A: 4 / DREA: 17",
+                  "mitigation": "Konfigurationdatei sollte nicht offentlich zugreifbar:\nKonfigurationsdatei sollte verschlüsselt werden.\n\nd3fend:D3-FE: Encrypting a file using a cryptographic key.\n\nD: 8 / R: 4 / E: 2 / A: 4/ DREA: 17",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 106,
@@ -579,7 +579,7 @@
                 "spoofing": 15,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 5,
+                "informationDisclosure": 8,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               },
@@ -3033,13 +3033,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
