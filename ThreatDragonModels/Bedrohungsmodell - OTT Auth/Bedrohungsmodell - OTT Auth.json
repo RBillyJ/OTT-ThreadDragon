@@ -263,20 +263,35 @@
                 },
                 {
                   "id": "04daa02a-aaa5-4957-b0ba-27d04c02edc7",
-                  "title": "New STRIDE threat",
+                  "title": "Elevation of Privilege wegen ungesicherter SD-Karte",
                   "status": "Open",
                   "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
+                  "type": "Elevation of privilege",
+                  "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
-                  "new": true,
+                  "new": false,
                   "number": 108,
                   "score": ""
                 }
               ],
               "hasOpenThreats": true,
-              "isWebApplication": null
+              "isWebApplication": null,
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
