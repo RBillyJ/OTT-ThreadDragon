@@ -550,15 +550,15 @@
                 {
                   "id": "ae498a2c-dab9-485e-9326-97dd46f5ca3e",
                   "title": "IP Spoofing als API Gateway",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Spoofing",
                   "description": "Weil der Schlüssel in eine ungesicherte/unverschlüsselte Datei gespeichert ist, kann man den Schlüssel kopieren.\n\nWenn statischer symmetrischer Schlüssel kompromittiert wird, kann die API Gateway gespooft werden. Sensitive Daten, die von der 2-FaktorAuth gesendet werden, werden dann kompromittiert.\n\nCAPEC-151: Identity Spoofing: assuming (i.e., taking on) the identity of some other entity (human or non-human) and then using that identity to accomplish a goal.\n\nT1649: Steal or Forge Authentication Certificates: steal or forge certificates used for authentication to access remote systems or resources.\n\nD: 8 / R: 9 / E: 7 / A: 10 / DREA: 34",
                   "mitigation": "Schlüssel muss gesichert werden. (Verschlüsselung der Konfig-Datei oder nicht statisch)\n\nD: 8 / R:  5/ E: 2 / A: 10 / neue DREA: 25",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 103,
-                  "score": ""
+                  "score": "25"
                 },
                 {
                   "id": "f9a55b37-c594-476b-944e-bf703edd77b7",
@@ -576,7 +576,7 @@
               ],
               "hasOpenThreats": true,
               "threatFrequency": {
-                "spoofing": 8,
+                "spoofing": 10,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 4,
@@ -2909,8 +2909,8 @@
                 "text": "SIEM System"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -3007,7 +3007,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -3016,25 +3016,32 @@
                 {
                   "id": "fc51ac6e-7fb9-48dd-bd48-a530fb73d587",
                   "title": "Änderung der Zielemailaddresse",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Tampering",
-                  "description": "Der wöchentliche Report wird zu einem Angriffer statt zu Management geschickt. Sensitive Daten über die Dienste werden offengelegt.\n\nCAPEC-165: File Manipulation: An attacker modifies file contents or attributes (such as extensions or names) of files in a manner to cause incorrect processing by an application\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
-                  "mitigation": "Konfigurationsdatei sollte nicht einfach verändert werden:\nAdmin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern",
+                  "description": "Der wöchentliche Report wird zu einem Angriffer statt zu Management geschickt. Sensitive Daten über die Dienste werden offengelegt.\n\nCAPEC-165: File Manipulation: An attacker modifies file contents or attributes (such as extensions or names) of files in a manner to cause incorrect processing by an application\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity\n\nD: 7 / R: 7 / E: 7 / A: 8 / DREA: 29",
+                  "mitigation": "Konfigurationsdatei sollte nicht einfach verändert werden:\nAdmin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern\n\nD: 7 / R: 4 / E: 2 / A: 8 / neue DREA: 21",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
-                  "score": ""
+                  "score": "21"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 4,
+                "tampering": 5,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
