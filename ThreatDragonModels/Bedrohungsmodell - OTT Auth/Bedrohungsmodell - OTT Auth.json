@@ -2346,7 +2346,6 @@
               "cell": "a61b14e2-bb1a-46e1-8cce-a5736d046389",
               "port": "011a86f0-b32b-4a30-a1d6-c0a418404a8a"
             },
-            "vertices": [],
             "tools": {
               "items": [
                 "boundary",
@@ -2356,7 +2355,8 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -2588,8 +2588,8 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Repudiation",
-                  "description": "durch SQL-Injection oder von Malicious Insiders\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "mit ausreichenden Rechten (z.B von Malicious Insiders oder einem kompromittierten Admin-Konto)\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
+                  "mitigation": "Log DB sollte read-only außerhalb des 2-FaktorAuthdienst",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
@@ -2598,10 +2598,17 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 2,
+                "repudiation": 3,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
