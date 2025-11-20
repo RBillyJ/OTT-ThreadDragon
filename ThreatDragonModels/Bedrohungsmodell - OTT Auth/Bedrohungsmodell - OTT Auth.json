@@ -267,7 +267,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Elevation of privilege",
-                  "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.",
+                  "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.\n\nCAPEC-150: An adversary exploits well-known locations for resources for the purposes of undermining the security of the target. \n\nT1005: Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -283,7 +283,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
             }
           },
@@ -405,8 +405,8 @@
                   "title": "Zerstörung des Host Device",
                   "status": "Open",
                   "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Keine Redundanz für diese Dienst",
+                  "type": "Denial of service",
+                  "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -424,9 +424,12 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
-              }
+              },
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null,
+              "isWebApplication": null
             }
           },
           {
@@ -561,7 +564,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Information disclosure",
-                  "description": "Kryptographische Schlüsseln sind in dieser Datei gespeichert.\n",
+                  "description": "Kryptographische Schlüsseln sind in dieser Datei gespeichert.\n\nCAPEC-180: Exploiting Incorrectly Configured Access Control Security Levels.\n\nT1552: Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system.",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -574,7 +577,7 @@
                 "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               },
@@ -2599,13 +2602,6 @@
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -3047,13 +3043,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
