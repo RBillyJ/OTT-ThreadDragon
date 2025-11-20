@@ -268,7 +268,7 @@
                   "severity": "TBD",
                   "type": "Elevation of privilege",
                   "description": "Alle Applikationen mit ausreichenden Rechten können die Daten von AllSecure Applikationen in der SD-Karte lesen.\n\nCAPEC-150: An adversary exploits well-known locations for resources for the purposes of undermining the security of the target. \n\nT1005: Adversaries may search local system sources, such as file systems, configuration files, local databases, virtual machine files, or process memory, to find files of interest and sensitive data prior to Exfiltration.",
-                  "mitigation": "Applikationdaten sollte nicht in einer SD-Karte gespeichert werden",
+                  "mitigation": "Jede Applikation sollte nicht die Daten anderer Applikationen sehen:\nApplikationdaten sollte nicht in einer SD-Karte gespeichert werden",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 108,
@@ -283,8 +283,17 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 3
-              }
+                "elevationOfPrivilege": 4
+              },
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -407,7 +416,7 @@
                   "severity": "TBD",
                   "type": "Denial of service",
                   "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property",
-                  "mitigation": "Offsite Backups",
+                  "mitigation": "braucht Redundanz:\nOffsite Backups",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
@@ -424,7 +433,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 2,
+                "denialOfService": 3,
                 "elevationOfPrivilege": 0
               },
               "handlesCardPayment": null,
@@ -2453,7 +2462,7 @@
           {
             "position": {
               "x": 410,
-              "y": -174
+              "y": -180
             },
             "size": {
               "width": 120,
@@ -2579,7 +2588,7 @@
                   "severity": "TBD",
                   "type": "Repudiation",
                   "description": "mit ausreichenden Rechten (z.B von Malicious Insiders oder einem kompromittierten Admin-Konto)\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
-                  "mitigation": "Log DB sollte read-only außerhalb des 2-FaktorAuthdienst",
+                  "mitigation": "Logdatei sollte nicht einfach manipulierbar:\nLog DB sollte read-only außerhalb des 2-FaktorAuthdienst",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
@@ -2588,7 +2597,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 3,
+                "repudiation": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -3018,7 +3027,7 @@
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "Der wöchentliche Report wird zu einem Angriffer statt zu Management geschickt. Sensitive Daten über die Dienste werden offengelegt.\n\nCAPEC-165: File Manipulation: An attacker modifies file contents or attributes (such as extensions or names) of files in a manner to cause incorrect processing by an application\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
-                  "mitigation": "Admin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern",
+                  "mitigation": "Konfigurationsdatei sollte nicht einfach verändert werden:\nAdmin-Rechte sollten notwendig sein, um diese Konfigurationsdatei zu ändern",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 104,
@@ -3027,7 +3036,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 3,
+                "tampering": 4,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
