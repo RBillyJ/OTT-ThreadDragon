@@ -409,7 +409,7 @@
                   "severity": "High",
                   "type": "Denial of service",
                   "description": "Keine Redundanz für diese Dienst. Zum Beispiel wegen eines Brands.\n\nCAPEC-547: Physical Destruction of Device or Component\n\nT0879: Damage to Property\n\nD: 10 / R: 8 / E: 8 / A: 10 / DREA: 36",
-                  "mitigation": "braucht Redundanz:\nOffsite Backups\n\nD: 6 / R: 8 / E: 8/ A: 10 / DREA: 32",
+                  "mitigation": "Braucht Redundanz.\nOffsite backup\n\nMatrix, D3-RS: Restore Software.\nD: 6 / R: 8 / E: 8 / A: 10 / DREA: 32",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 107,
@@ -426,7 +426,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 6,
+                "denialOfService": 7,
                 "elevationOfPrivilege": 0
               },
               "handlesCardPayment": null,
@@ -2579,7 +2579,7 @@
                   "severity": "Low",
                   "type": "Repudiation",
                   "description": "mit ausreichenden Rechten (z.B von Malicious Insiders oder einem kompromittierten Admin-Konto)\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity\n\nD: 7 / R: 8 / E: 4 / A: 8 / DREA: 29",
-                  "mitigation": "Logdatei sollte nicht einfach manipulierbar:\nLog DB sollte read-only außerhalb des 2-FaktorAuthdienst\n\nD: 2 / R: 2 / E: 2 / A: 8 / DREA: 14",
+                  "mitigation": "Logdatei sollte nicht einfach manipulierbar:\nLog DB sollte read-only außerhalb des 2-FaktorAuthdienst\n\nd3fend: D3-LFP: Local File Permissions\n\nD: 2 / R: 2 / E: 2 / A: 8 / DREA: 14",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
@@ -2588,7 +2588,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 6,
+                "repudiation": 7,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
