@@ -400,8 +400,8 @@
                 "text": "Telefonnummer-\nAPI-Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -498,8 +498,30 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
+              "threats": [
+                {
+                  "id": "ae498a2c-dab9-485e-9326-97dd46f5ca3e",
+                  "title": "IP Spoofing als API Gateway",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Weil der Schlüssel in eine ungesicherte/unverschlüsselte Datei gespeichert ist, kann man den Schlüssel kopieren.\n\nWenn statischer symmetrischer Schlüssel kompromittiert wird, kann die API Gateway gespooft werden. Sensitive Daten, die von der 2-FaktorAuth gesendet werden, werden dann kompromittiert.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 103,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -635,7 +657,8 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "handlesCardPayment": null,
-              "handlesGoodsOrServices": null
+              "handlesGoodsOrServices": null,
+              "isWebApplication": null
             }
           },
           {
@@ -3033,7 +3056,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 102
+    "threatTop": 103
   },
   "version": "2.5.0"
 }
