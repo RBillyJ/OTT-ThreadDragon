@@ -1345,16 +1345,6 @@
             "target": {
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
             },
-            "vertices": [
-              {
-                "x": 490,
-                "y": 120
-              },
-              {
-                "x": 460,
-                "y": 130
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -1364,7 +1354,17 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 490,
+                "y": 120
+              },
+              {
+                "x": 460,
+                "y": 130
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -2585,7 +2585,7 @@
                   "status": "Open",
                   "severity": "TBD",
                   "type": "Repudiation",
-                  "description": "durch SQL-Injection oder von Malicious Insiders",
+                  "description": "durch SQL-Injection oder von Malicious Insiders\n\nCAPEC-93: Log Injection-Tampering-Forging: injects, manipulates or forges malicious log entries in the log file, allowing them to mislead a log audit.\nT1565: Data Manipulation: insert, delete, or manipulate data in order to influence external outcomes or hide activity",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -2595,10 +2595,17 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 1,
+                "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
