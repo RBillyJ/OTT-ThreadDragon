@@ -2529,6 +2529,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2612,7 +2613,6 @@
               ]
             },
             "id": "65115fe9-1cb4-42c2-a6cf-1f48dc1a1a05",
-            "zIndex": 17,
             "data": {
               "type": "tm.Process",
               "name": "Allsecure \nOTT Service",
